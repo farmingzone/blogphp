@@ -11,7 +11,7 @@ require '../config/database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHP & MySQL Blog App with Admin Panel</title>
     <!-- Custom Stylesheet-->
-    <link rel="stylesheet" href="<?= ROOT_URL ?>./css/style.css"/>
+    <link rel="stylesheet" href="<?= ROOT_URL ?>../css/style.css"/>
     <!-- iconscout cdn-->
     <link
       rel="stylesheet"

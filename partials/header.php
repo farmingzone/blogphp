@@ -11,7 +11,7 @@ require 'config/database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHP & MySQL Blog App with Admin Panel</title>
     <!-- Custom Stylesheet-->
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="<?= ROOT_URL ?>css/style.css"/>
     <!-- iconscout cdn-->
     <link
       rel="stylesheet"
@@ -28,18 +28,18 @@ require 'config/database.php';
       <div class="container nav__container">
         <a href="" class="nav__logo">FARMINGZONE</a>
         <ul class="nav__items">
-          <li><a href="../blog.php">Blog</a></li>
-          <li><a href="../about.php">About</a></li>
-          <li><a href="../services.php">Services</a></li>
-          <li><a href="../contact.php">Contact</a></li>
-          <!-- <li><a href="<?= ROOT_URL ?>signin.php">Signiin</a></li> -->
+          <li><a href="<?=ROOT_URL?>blog.php">Blog</a></li>
+          <li><a href="<?=ROOT_URL?>about.php">About</a></li>
+          <li><a href="<?=ROOT_URL?>services.php">Services</a></li>
+          <li><a href="<?=ROOT_URL?>contact.php">Contact</a></li>
+          <li><a href="<?=ROOT_URL?>signin.php">Signin</a></li>
           <li class="nav__profile">
             <div class="avatar">
               <img src="./images/avatar1.jpg" />
             </div>
             <ul>
-              <li><a href="../admin/index.php">Dashboard</a></li>
-              <li><a href="../logout.php">Logout</a></li>
+              <li><a href="<?=ROOT_URL?>admin/index.php">Dashboard</a></li>
+              <li><a href="<?=ROOT_URL?>logout.php">Logout</a></li>
             </ul>
           </li>
         </ul>

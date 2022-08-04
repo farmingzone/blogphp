@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Multiple Blog Website</title>
     <!-- Custom Stylesheet-->
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- iconscout cdn-->
     <link
       rel="stylesheet"
@@ -30,7 +30,7 @@
           <input type="password" placeholder="Password" />
           <button type="submit" class="btn">Sign In</button>
           <small
-            >Don't have an account? <a href="signup.html">Sign Up</a></small
+            >Don't have an account? <a href="signup.php">Sign Up</a></small
           >
         </form>
       </div>
