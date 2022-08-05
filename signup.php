@@ -29,9 +29,11 @@ require 'config/constants.php'
     <section class="form__section">
       <div class="container form__section-container">
         <h2>Sign Up</h2>
-        <div class="alert__message error">
-          <p>This is an error message</p>
-        </div>
+        <?php
+          if(isset($_SESSION['signup'])) {
+            
+          }
+        ?>
         <form action="<?=ROOT_URL?>signup-logic.php" enctype="multipart/form-data" method="post">
           <input type="text" name="firstname" placeholder="First Name" />
           <input type="text" name="lastname" placeholder="Last Name" />
