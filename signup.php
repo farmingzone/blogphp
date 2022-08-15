@@ -1,5 +1,4 @@
 <?php
-
 require 'config/constants.php';
 
 //get back form data if there was a registration error
