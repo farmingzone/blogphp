@@ -12,11 +12,43 @@ $users = mysqli_query($connection, $query);
 
 
 <section class="dashboard">
-        <?php if (isset($_SESSION['add-user-success'])) : ?>
+        <?php if (isset($_SESSION['add-user-success'])) : // shows if add user was successful ?>
             <div class="alert__message success container">
                 <p>
                     <?= $_SESSION['add-user-success'];
                     unset($_SESSION['add-user-success']);
+                    ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['edit-user-success'])) : // shows if edit user was successful ?>
+            <div class="alert__message success container">
+                <p>
+                    <?= $_SESSION['edit-user-success'];
+                    unset($_SESSION['edit-user-success']);
+                    ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['edit-user'])) : // shows if edit user was NOT successful ?>
+            <div class="alert__message error container">
+                <p>
+                    <?= $_SESSION['edit-user'];
+                    unset($_SESSION['edit-user']);
+                    ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['delete-user'])) : // shows if delete user was NOT successful ?>
+            <div class="alert__message error container">
+                <p>
+                    <?= $_SESSION['delete-user'];
+                    unset($_SESSION['delete-user']);
+                    ?>
+                </p>
+            </div>
+        <?php elseif (isset($_SESSION['delete-user-success'])) : // shows if delete user was successful ?>
+            <div class="alert__message success container">
+                <p>
+                    <?= $_SESSION['delete-user-success'];
+                    unset($_SESSION['delete-user-success']);
                     ?>
                 </p>
             </div>
@@ -65,6 +97,7 @@ $users = mysqli_query($connection, $query);
         </aside>
         <main>
             <h2>Manage Users</h2>
+            <?php if(mysqli_num_rows($users) > 0) : ?>
             <table>
                 <thead>
                     <tr>
@@ -87,6 +120,9 @@ $users = mysqli_query($connection, $query);
                     <?php endwhile ?>
                 </tbody>
             </table>
+            <?php else : ?>
+                <div class="alert__message error"><?= "No users found" ?></div>
+                <?php endif ?>
         </main>
     </div>
 </section>
