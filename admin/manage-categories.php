@@ -18,11 +18,35 @@ $categories = mysqli_query($connection, $query);
                 ?>
             </p>
         </div>
-    <?php elseif (isset($_SESSION['add-category-success'])) : // shows if add category was NOT successful ?>
+    <?php elseif (isset($_SESSION['add-category'])) : // shows if add category was NOT successful ?>
         <div class="alert__message error container">
             <p>
                 <?= $_SESSION['add-category'];
                 unset($_SESSION['add-category']);
+                ?>
+            </p>
+        </div>
+    <?php elseif (isset($_SESSION['edit-category-success'])) : // shows if edit category was successful ?>
+        <div class="alert__message success container">
+            <p>
+                <?= $_SESSION['edit-category-success'];
+                unset($_SESSION['edit-category-success']);
+                ?>
+            </p>
+        </div>
+    <?php elseif (isset($_SESSION['edit-category'])) : // shows if edit category was NOT successful ?>
+        <div class="alert__message error container">
+            <p>
+                <?= $_SESSION['edit-category'];
+                unset($_SESSION['edit-category']);
+                ?>
+            </p>
+        </div>
+    <?php elseif (isset($_SESSION['delete-category-success'])) : // shows if delete category was NOT successful ?>
+        <div class="alert__message success container">
+            <p>
+                <?= $_SESSION['delete-category-success'];
+                unset($_SESSION['delete-category-success']);
                 ?>
             </p>
         </div>
